@@ -1,0 +1,35 @@
+body {
+    background-color: #282828;
+    color:wheat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.profile {
+    margin-left: 600px;
+}
+.Welcome {
+    margin-left: 500px;
+}
+.About-Me {
+    margin-left: 500px;
+}
+.Projects {
+    margin-left: 400px;
+}
+a {
+    color: wheat;
+    text-decoration: none !important;
+}
+button {
+    /* display: flex; */
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    color:wheat;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #000000;
+}
