@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <script type="text/javascript">
+    function showYesNoCancelAlert(message) {
+  var result = confirm(message);
+  if (result) {
+    alert("Changed To Github");
+    document.getElementById("demo").style.color = "green";
+    document.getElementById("demo").innerHTML = "green";
+  } else if (result === false) {
+    alert("Changed To Home");
+    window.location.href = "https://thecode764.github.io";
+  } else {
+    alert("Changed To Home");
+  }
+}
+
+showYesNoCancelAlert("Change To Github?");
+    function load()
+    {
+    window.location.href = "https://github.com/Thecode764";
+
+    }
+    </script>
+    </head>
+
+    <body onload="load()">
+    <h1>Changing To Github</h1>
+    </body>
+    </html> 
