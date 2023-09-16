@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+        <h1 id="clock"></h1>
+
+    <script>
+        //بارگذاری ساعت در صفحه
+        function updateClock() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            minutes = (minutes < 10 ? "0" : "") + minutes;
+            seconds = (seconds < 10 ? "0" : "") + seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("clock").innerText = timeString;
+        }
+
+        setInterval(updateClock, 1000); // به روزرسانی ساعت هر 1 ثانیه
+    </script>
     <a href="./Thecode764HUB.html">
         <h3>
             Thecode764 Hub
