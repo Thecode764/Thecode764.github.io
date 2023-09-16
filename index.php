@@ -1,1 +1,3 @@
-<?php print date("h:ia"); ?>
+<?php
+include('index.html');
+?>
