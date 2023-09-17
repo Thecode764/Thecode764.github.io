@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Timer</h1>
+    <label for="time">Second:</label>
+    <input type="number" id="time" min="1">
+    <button onclick="startTimer()">Start</button>
+    <p id="countdown"></p>
+
+    <script>
+        function startTimer() {
+            var timeInput = document.getElementById("time");
+            var countdownElement = document.getElementById("countdown");
+            var time = parseInt(timeInput.value);
+
+            if (isNaN(time) || time <= 0) {
+                countdownElement.textContent = "Error!";
+                return;
+            }
+
+            countdownElement.textContent = "Seconds:" + time;
+
+            var countdownInterval = setInterval(function() {
+                time--;
+                countdownElement.textContent = "Seconds:" + time;
+
+                if (time <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = "Time Out";
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
