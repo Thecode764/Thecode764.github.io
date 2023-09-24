@@ -15,9 +15,24 @@ body {
 .Projects {
     margin-left: 400px;
 }
-a {
-    color: wheat;
+body {  
+    background-color: #282828;
+    color:wheat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main{
+    text-align: center;
+}
+.left{
+    margin-left:5px;
+}
+a{
     text-decoration: none !important;
+    color:wheat; 
+}
+.profile{
+    margin-top: 50px;
+    width: 260px;
 }
 button {
     /* display: flex; */
@@ -32,7 +47,14 @@ button {
     cursor: pointer;
     border: none;
     background: #000000;
-}
+   }
+   
+   button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
 .clock {
     position: absolute;
     top: 10px;
