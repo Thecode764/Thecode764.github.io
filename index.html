@@ -11,7 +11,10 @@
 <body>
     </script>
         <h1 id="clock"></h1>
-
+        <script>
+            document.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); // جلوگیری از نمایش منوی راست کلیک
+            alert("Do not steal!!"); // نمایش پنجره هشدار
     <script>
         function updateClock() {
             var currentTime = new Date();
