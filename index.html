@@ -16,6 +16,18 @@
             event.preventDefault(); // جلوگیری از نمایش منوی راست کلیک
             alert("Do not steal!!");
 	</script>
+        <h3 id="changeColorButton">Change Color White</h3>
+        <script>
+         document.getElementById("changeColorButton").addEventListener("click", function() {
+   	 document.body.style.backgroundColor = "white";
+	 });
+       </script>
+       <h3 id="changeColorButton2">Change Color Black</h3>
+       <script>
+        document.getElementById("changeColorButton2").addEventListener("click", function() {
+       document.body.style.backgroundColor = "#282828";
+    });
+    </script>
        <script>
         function updateClock() {
             var currentTime = new Date();
@@ -31,18 +43,6 @@
         }
 
         setInterval(updateClock, 1000); 
-    </script>
-        <h3 id="changeColorButton">Change Color White</h3>
-        <script>
-         document.getElementById("changeColorButton").addEventListener("click", function() {
-   	 document.body.style.backgroundColor = "white";
-	 });
-       </script>
-       <h3 id="changeColorButton2">Change Color Black</h3>
-       <script>
-        document.getElementById("changeColorButton2").addEventListener("click", function() {
-       document.body.style.backgroundColor = "#282828";
-    });
     </script>
     <a href="./Thecode764HUB.html">
         <h3>
