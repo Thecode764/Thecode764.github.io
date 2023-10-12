@@ -19,11 +19,13 @@ Give access to bot three by clicking on this text
 Click + Button In Discord To Create New Server
 <h2>Step 4: Invite Your Discord Bot</h2>
 <img src="https://i.postimg.cc/wxHw2QC4/Screenshot-from-2023-10-02-18-28-40.png?dl=1">
+<br>
 Copy Invite Link And Paste... Select Discord Server To Invite
 <h2>Step 5: Install Discord.py</h2>
 <Code>pip install discord.py</Code>
-<br>
+<br><br>
 Discord.py Was Installed
+<br>
 Notice: Don't Use Venv For Create Discord Bot
 <h2>Step 6: Start Code</h2>
 Create New File
@@ -64,21 +66,35 @@ Changed Status To DND
 <br>
 <Code language="python">
 import discord
+<br>
 from discord.ext import commands
-token = "token here" 
+<br>
+token = "token here"
+<br>
 intents = discord.Intents.default()
+<br>
 intents.message_content = True
+<br>
 bot = commands.Bot(command_prefix='/', intents=intents)
+<br>
 @bot.event
+<br>
 async def on_ready():
+<br>
     await bot.change_presence(status=discord.Status.idle)
+<br>
     print('----------------------------------')
+<br>
     print('bot runned')
+<br>
     print('bot name: ' + bot.user.name)
     print('bot id: ' + str(bot.user.id))
+<br>
 bot.run("Token Here")
 </Code>
+<br>
 Changed Status To IDLE
+<br>
 Thanks For Read This Gist
 </body>
 </html>
