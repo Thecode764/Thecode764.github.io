@@ -1,1 +1,67 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gists Beta</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/141347375?s=400&u=59717d4c596f428a1080bd5acbe42ff6920d506f&v=4">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1>How To Change Bot Status With Discord.py</h1>
+Change Discord Bot Status Via Discord.py
+<h2>Step 1: Create Discord Bot In Discord Developer Portal</h2>
+<a href="https://discord.com/developers">Click This Text To Visit Discord Developer Portal</a>
+## Step 2: 3 Bot Access
+Give access to bot three by clicking on this text
+<img src="https://i.postimg.cc/M64WjXgG/Screenshot-from-2023-10-02-18-25-13.png?dl=1">
+<h2>Step 3: Create Discord Server</h2>
+Click + Button In Discord To Create New Server
+<h2>Step 4: Invite Your Discord Bot</h2>
+<img src="https://i.postimg.cc/wxHw2QC4/Screenshot-from-2023-10-02-18-28-40.png?dl=1">
+Copy Invite Link And Paste... Select Discord Server To Invite
+<h2>Step 5: Install Discord.py</h2>
+<Code>pip install discord.py</Code>
+Discord.py Was Installed
+Notice: Don't Use Venv For Create Discord Bot
+<h2>Step 6: Start Code</h2>
+Create New File
+Codes
+<Code language="python">
+  import discord
+from discord.ext import commands
+token = "token here" 
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='/', intents=intents)
+@bot.event
+async def on_ready():
+    await bot.change_presence(status=discord.Status.do_not_disturb)
+    print('----------------------------------')
+    print('bot runned')
+    print('bot name: ' + bot.user.name)
+    print('bot id: ' + str(bot.user.id))
+bot.run("Token Here")
+</Code>
+Changed Status To DND
+### Change Status To IDLE
+<Code language="python">
+  import discord
+from discord.ext import commands
+token = "token here" 
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='/', intents=intents)
+@bot.event
+async def on_ready():
+    await bot.change_presence(status=discord.Status.idle)
+    print('----------------------------------')
+    print('bot runned')
+    print('bot name: ' + bot.user.name)
+    print('bot id: ' + str(bot.user.id))
+bot.run("Token Here")
+</Code>
+Changed Status To IDLE
+Thanks For Read This Gist
+</body>
+</html>
