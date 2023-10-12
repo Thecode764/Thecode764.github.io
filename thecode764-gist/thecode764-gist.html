@@ -22,6 +22,7 @@ Click + Button In Discord To Create New Server
 Copy Invite Link And Paste... Select Discord Server To Invite
 <h2>Step 5: Install Discord.py</h2>
 <Code>pip install discord.py</Code>
+<br>
 Discord.py Was Installed
 Notice: Don't Use Venv For Create Discord Bot
 <h2>Step 6: Start Code</h2>
@@ -30,21 +31,34 @@ Create New File
 Codes
 <br>
 <Code language="python">
-  import discord
+import discord
+<br>
 from discord.ext import commands
-token = "token here" 
+<br>
+token = "token here"
+<br>
 intents = discord.Intents.default()
+<br>
 intents.message_content = True
+<br>
 bot = commands.Bot(command_prefix='/', intents=intents)
+<br>
 @bot.event
 async def on_ready():
+<br>
     await bot.change_presence(status=discord.Status.do_not_disturb)
+<br>
     print('----------------------------------')
+<br>
     print('bot runned')
+<br>
     print('bot name: ' + bot.user.name)
+<br>
     print('bot id: ' + str(bot.user.id))
+<br>
 bot.run("Token Here")
 </Code>
+<br>
 Changed Status To DND
 <h3>Change Status To IDLE</h3>
 <br>
