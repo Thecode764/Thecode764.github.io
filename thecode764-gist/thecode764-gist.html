@@ -97,5 +97,79 @@ bot.run("Token Here")
 Changed Status To IDLE
 <br><br>
 Thanks For Read This Gist
+<hr><hr>
+<h1>Can Use While Run Bot Code Send Message In Discord Servers?</h1>
+Answer To This Ask = Yes
+<h2>Lets Go</h2>
+<ul>
+</li>
+Copy Channel Id For Send (Not Server Id)
+File Codes
+</li>
+</ul>
+<br><br><br>
+<Code>
+import discord
+<br>
+from discord.ext import commands
+<br>
+import random
+<br>
+import time
+<br>
+token = "Token Here"
+<br>
+intents = discord.Intents.default()
+<br>
+intents.message_content = True
+<br>
+bot = commands.Bot(command_prefix='!', intents=intents)
+<br>
+@bot.event
+<br>
+async def on_ready():  
+<br>
+    async def on_ready():
+<br>
+        await bot.tree.sync()
+<br>
+        activity = discord.Activity(type=discord.ActivityType.watching,name="Starting...")
+<br>
+        await bot.change_presence(status=discord.Status.idle, activity=activity)
+<br>
+        time.sleep(10)
+<br>
+        activity = discord.Activity(type=discord.ActivityType.playing,name="DM Me To Commands >> Not Complete")
+<br>
+        activity = discord.Activity(type=discord.ActivityType.playing,name="DM Me To Commands >> Not Complete")
+<br>
+        await bot.change_presence(status=discord.Status.idle, activity=activity)
+<br>
+        time.sleep(10)
+<br>
+        activity = discord.Activity(type=discord.ActivityType.playing,name="DM Me To Commands >> Not Complete")
+<br>
+        await bot.change_presence(status=discord.Status.idle, activity=activity)
+<br>
+        time.sleep(10)
+<br>
+        activity = discord.Activity(type=discord.ActivityType.playing,name="DM Me To Commands >>")
+<br>
+        await bot.change_presence(status=discord.Status.dnd, activity=activity)
+<br>
+        activity = discord.Activity(type=discord.ActivityType.watching, name=f"{len(bot.guilds)} servers")
+<br>
+        await bot.change_presence(status=discord.Status.dnd, activity=activity)
+<br>
+        activity = discord.Activity(type=discord.ActivityType.watching, name=f"{len(bot.guilds)} servers")
+<br>
+        await bot.change_presence(status=discord.Status.dnd, activity=activity)
+<br>
+        channel = bot.get_channel(Channel Id)
+<br>
+        await channel.send("Message Here")
+<br>
+        bot.run(token)
+</Code>
 </body>
 </html>
